@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSIT Events Hub</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f8f9fa; }
+    header { background: #343a40; color: #fff; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+    nav a { color: white; margin: 0 1rem; text-decoration: none; position: relative; }
+    nav a:hover, nav a.active { text-decoration: underline; }
+    .hero {
+      background: url('https://portal.tu.edu.np/medias/pk_2023_06_22_11_45_14.jpg') no-repeat center center/cover;
+      color: rgb(26, 24, 24);
+      text-align: center;
+      position: relative;
+      height: 100vh;
+  
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .hero h1 { margin-bottom: 0.5rem; font-size: 3rem; }
+    .hero p { font-size: 1.4rem; max-width: 1000px; margin: 0 auto; }
+    .hero button {
+      margin-top: 1.5rem; padding: 0.7rem 1.8rem;
+      background: white; color: #007bff;
+      border: none; border-radius: 5px;
+      font-weight: bold; cursor: pointer;
+    }
+    .hero button:hover {
+      background: #e2e6ea;
+    }
+    .footer { background: #343a40; color: white; text-align: center; padding: 1rem; margin-top: 2rem; margin-bottom:5rem;  }
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong>PKCSIT Events Hub</strong></div>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="events.html">Events</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to PKCSIT Events Hub</h1>
+      <p>Your one-stop platform for all CSIT department events, activities, and learning opportunities.</p>
+      <button onclick="window.location.href='events.html'">View Upcoming Events</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; PKCSIT Events Hub | Developed by BSc CSIT 5th Semester</p>
+  </footer>
+</body>
+</html>

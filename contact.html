@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - CSIT Events Hub</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #f8f9fa;
+    }
+    header {
+      background: #343a40;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+    }
+    nav a:hover, nav a.active {
+      text-decoration: underline;
+    }
+
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 2rem;
+      gap: 2rem;
+    }
+    .contact-form, .contact-info {
+      flex: 1 1 300px;
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .contact-form h2, .contact-info h2 {
+      margin-top: 0;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin: 0.5rem 0 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 0.6rem 1.2rem;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+
+    iframe {
+      width: 100%;
+      height: 250px;
+      border: none;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+
+    .footer {
+      background: #343a40;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong>CSIT Events Hub</strong></div>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="events.html">Events</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <main class="contact-container">
+    <div class="contact-form">
+      <h2>Send Us a Message</h2>
+      <form action="submit_contact.php" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="text" name="subject" placeholder="Subject" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <div class="contact-info">
+      <h2>Contact Info</h2>
+      <p><strong>Address:</strong> Padmakanya Multiple Campus, Kathmandu, Nepal</p>
+      <p><strong>Email:</strong> pkcsitevents9@pkcampus.edu.np</p>
+      <p><strong>Phone:</strong> +977-1-1234567</p>
+    
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 CSIT Events Hub | Developed by BSc CSIT 5th Semester</p>
+  </footer>
+</body>
+</html>

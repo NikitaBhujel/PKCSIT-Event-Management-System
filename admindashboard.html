@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard - CSIT Events Hub</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #f1f1f1; }
+    header {
+      background: #343a40; color: white; padding: 1rem 2rem;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .dashboard {
+      display: grid; grid-template-columns: 250px 1fr;
+      min-height: calc(100vh - 70px);
+    }
+    .sidebar {
+      background: #495057; color: white; padding: 2rem 1rem;
+    }
+    .sidebar h2 { margin-top: 0; }
+    .sidebar a {
+      color: white; display: block; margin: 1rem 0;
+      text-decoration: none;
+    }
+    .sidebar a:hover { text-decoration: underline; }
+
+    .main {
+      padding: 2rem;
+    }
+    .form-container {
+      background: white; padding: 1.5rem; border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 2rem;
+    }
+    .form-container h3 { margin-top: 0; }
+
+    input, textarea, select {
+      width: 100%; padding: 0.6rem; margin-bottom: 1rem;
+      border: 1px solid #ccc; border-radius: 5px;
+    }
+    button {
+      padding: 0.6rem 1.2rem; background: #007bff; color: white;
+      border: none; border-radius: 5px; cursor: pointer;
+    }
+    button:hover { background: #0056b3; }
+
+    table {
+      width: 100%; border-collapse: collapse; background: white;
+    }
+    th, td {
+      padding: 0.8rem; border: 1px solid #ddd; text-align: left;
+    }
+    th { background: #007bff; color: white; }
+
+    .actions button {
+      margin-right: 0.5rem; background: #ffc107; color: black;
+    }
+    .actions .delete {
+      background: #dc3545; color: white;
+    }
+    .actions button:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Admin Dashboard</h1>
+    <a href="logout.html" style="color: white; text-decoration: underline;">Logout</a>
+  </header>
+
+  <div class="dashboard">
+    <aside class="sidebar">
+      <h2>Menu</h2>
+      <a href="#create-event">Create/Update Event</a>
+      <a href="#event-list">Manage Events</a>
+      <a href="#registered-events">View Registered Events</a>
+    </aside>
+
+    <main class="main">
+      <section id="create-event" class="form-container">
+        <h3>Create or Update Event</h3>
+        <form id="eventForm">
+          <input type="text" placeholder="Event Title" name="title" required />
+          <textarea placeholder="Event Description" name="description" rows="4" required></textarea>
+          <input type="date" name="date" required />
+          <input type="time" name="time" required />
+          <input type="text" name="venue" placeholder="Venue" required />
+          <button type="submit">Save Event</button>
+        </form>
+      </section>
+
+      <section id="event-list">
+        <h3>Event List</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Venue</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Dummy Data -->
+            <tr>
+              <td>AI Seminar</td>
+              <td>2025-06-15</td>
+              <td>10:00 AM</td>
+              <td>Auditorium</td>
+              <td class="actions">
+                <button>Edit</button>
+                <button class="delete">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Web Dev Workshop</td>
+              <td>2025-06-20</td>
+              <td>2:00 PM</td>
+              <td>Lab 3</td>
+              <td class="actions">
+                <button>Edit</button>
+                <button class="delete">Delete</button>
+              </td>
+            </tr>
+            <!-- Replace with dynamic content -->
+          </tbody>
+        </table>
+      </section>
+
+      <section id="registered-events" style="margin-top: 2rem;">
+        <h3>Registered Events</h3>
+        <button onclick="window.location.href='registered-events.html'">View Registered Users</button>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
