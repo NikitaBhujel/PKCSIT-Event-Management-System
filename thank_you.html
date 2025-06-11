@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Registration Successful</title>
+<style>
+ /* Base container width */
+.container {
+  max-width: 700px;
+  width: 90%;  /* Fluid width, max 700px */
+  margin: 2rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Inputs take full width of container */
+input, select, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* includes padding in width */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  body {
+    padding: 0 1rem;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  nav {
+    margin-top: 0.5rem;
+  }
+
+  nav a {
+    display: block;
+    margin: 0.3rem 0;
+  }
+
+  .container {
+    margin: 1rem auto;
+    padding: 1rem;
+    width: 100%;   /* Full width on small screens */
+    max-width: 100%; /* Remove max-width restriction */
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  input, select, textarea {
+    padding: 0.5rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .footer {
+    font-size: 0.9rem;
+    padding: 0.8rem 1rem;
+  }
+}
+
+</style>
+</head>
+<body>
+  <div class="message">
+    <h1>Thank You for Registering!</h1>
+    <p>Your registration has been successfully submitted.</p>
+    <p><a href="hackathon_registration.html">Go back to registration form</a></p>
+  </div>
+</body>
+</html>
